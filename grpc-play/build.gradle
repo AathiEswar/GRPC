@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // gRPC / Proto related dependencies
+    implementation 'io.grpc:grpc-netty-shaded:1.68.1'
+    implementation 'io.grpc:grpc-protobuf:1.68.1'
+    implementation 'io.grpc:grpc-stub:1.68.1'
+
+    // necessary for Java 9+
+    implementation 'org.apache.tomcat:annotations-api:6.0.53'
+
+    // logback
+    implementation 'ch.qos.logback:logback-classic:1.5.12'
+
+    // Jackson lib for performance test
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.1'
+
+    // JUnit
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // Add other dependencies if needed
+}
+
+test {
+    useJUnitPlatform()
+}
