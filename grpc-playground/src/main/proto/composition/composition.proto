@@ -1,0 +1,23 @@
+syntax = 'proto3';
+
+package comp;
+
+option java_multiple_files = true;
+option java_package = "com.fslabs.models.composition";
+
+message Address{
+  string street = 1;
+  string city = 2;
+  string state = 3;
+}
+
+message School{
+  string name = 1;
+  Address address = 2;
+}
+
+message Student{
+  int32  id = 1;
+  string name = 2;
+  Address address = 3;
+}

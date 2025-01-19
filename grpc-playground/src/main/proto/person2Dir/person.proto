@@ -1,0 +1,12 @@
+// Defines the type of proto syntax version that needs to be used
+syntax = "proto3";
+
+package person2Package;
+
+option java_package = "com.fslabs.models.person2Options";
+
+// message is like class in OOPS
+message Person {
+  string name = 1;
+  int32 age = 2;
+}

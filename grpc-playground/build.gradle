@@ -1,0 +1,102 @@
+plugins {
+    id 'java'
+    id "com.google.protobuf" version "0.9.4"
+}
+
+group = 'org.fslabs'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    grpcVersion = '1.68.1'
+    protocVersion = '3.25.5'
+    logbackVersion = '1.5.12'
+    jacksonVersion = '2.18.1'
+    tomcatAnnotationsVersion = '6.0.53'
+    osMavenPluginVersion = '1.7.1'
+    protobufMavenPluginVersion = '0.6.1'
+    junitVersion = '5.11.3'
+    surefireVersion = '3.5.2'
+}
+
+dependencies {
+    // gRPC / Proto related dependencies
+    implementation "io.grpc:grpc-netty-shaded:$grpcVersion"
+    implementation "io.grpc:grpc-protobuf:$grpcVersion"
+    implementation "io.grpc:grpc-stub:$grpcVersion"
+    // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
+    implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '4.29.3'
+    // https://mvnrepository.com/artifact/io.grpc/grpc-all
+    implementation group: 'io.grpc', name: 'grpc-all', version: '1.69.0'
+
+
+    // Necessary for Java 9+
+    compileOnly "org.apache.tomcat:annotations-api:$tomcatAnnotationsVersion"
+
+    // Logback
+    implementation "ch.qos.logback:logback-classic:$logbackVersion"
+
+    // Jackson for a performance test
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+
+    // JUnit
+    testImplementation platform("org.junit:junit-bom:$junitVersion")
+    testImplementation "org.junit.jupiter:junit-jupiter-engine"
+    testImplementation "org.junit.jupiter:junit-jupiter-params"
+}
+
+sourceSets {
+    main{
+        java {
+            srcDirs 'build/generated/source/proto/main/grpc'
+            srcDirs 'build/generated/source/proto/main/java'
+        }
+    }
+}
+
+protobuf {
+    // Configure the protoc executable
+    protoc {
+        // Download from repositories
+        artifact = 'com.google.protobuf:protoc:4.29.3'
+    }
+
+    // Locate the codegen plugins
+    plugins {
+        // Locate a plugin with name 'grpc'. This step is optional.
+        // If you leave it empty, it uses the current directory.
+        // If you don't specify it, protoc will try to use "protoc-gen-grpc" from
+        // system search path.
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.69.0'
+            // or
+            // path = 'tools/protoc-gen-grpc-java'
+        }
+        // Any other plugins
+
+    }
+
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

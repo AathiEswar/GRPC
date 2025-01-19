@@ -1,0 +1,21 @@
+// single line comments
+/*
+  multi
+  line
+  comment
+ */
+
+// Defines the type of proto syntax version that needs to be used
+syntax = "proto3";
+
+package person1Package;
+
+
+option java_multiple_files = true ;
+option java_package = "com.fslabs.models.person1Options";
+
+// message is like class in OOPS
+message Person {
+  string name = 1;
+  int32 age = 2;
+}
