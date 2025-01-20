@@ -1,0 +1,18 @@
+syntax = 'proto3';
+
+package collections;
+
+option java_package = "com.fslabs.models.collection";
+option java_multiple_files = true;
+
+message Book {
+  string title = 1;
+  string author = 2;
+  int32 publication_year = 3;
+}
+
+message Library{
+  string name = 1;
+  // repeated is like a list
+  repeated Book books = 2;
+}

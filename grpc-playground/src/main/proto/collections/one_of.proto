@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+import "collections/enum.proto";
+
+package collections.one_of;
+
+option java_package = "com.fslabs.collections";
+option java_multiple_files= true;
+
+message SignIn{
+  string email= 1;
+  string password = 2;
+}
+
+message SignUp{
+  string email = 1;
+  string password = 2;
+  string confirmPassword = 3;
+}
+
+message Login{
+  oneof login{
+    SignIn sign_in = 1;
+    SignUp sign_up = 2;
+  }
+}
+

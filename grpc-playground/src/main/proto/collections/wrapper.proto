@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package collections.map;
+
+import "google/protobuf/wrappers.proto";
+
+option java_package = "com.fslabs.collections";
+option java_multiple_files= true;
+
+message WrapperGoogle {
+  google.protobuf.Int32Value num = 1;
+  google.protobuf.BoolValue status = 2;
+}

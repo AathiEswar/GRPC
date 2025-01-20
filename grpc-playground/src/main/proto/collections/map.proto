@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "collections/enum.proto";
+
+package collections.map;
+
+option java_package = "com.fslabs.collections";
+option java_multiple_files= true;
+
+message Car{
+  string manufacture = 1;
+  string model = 2;
+  int32 model_number = 3;
+  collections.enum.Color color = 4;
+}
+
+message Inventory {
+  string name = 1;
+  map<int32 , Car> inventory = 2;
+}

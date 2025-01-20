@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package collections.enum;
+
+option java_package = "com.fslabs.collections";
+option java_multiple_files= true;
+
+enum Color {
+  RED = 0;
+  GREEN = 1;
+  BLUE = 2;
+  YELLOW = 3;
+}
