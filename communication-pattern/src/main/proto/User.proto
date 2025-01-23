@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files=true;
+
+message User{
+  string name = 1;
+  int32 age = 2;
+}
+
+message Id{
+  string name = 1;
+  int32 id = 2;
+}
+
+service Service{
+  rpc GetIdByName(User) returns (Id);
+}
