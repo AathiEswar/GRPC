@@ -21,6 +21,12 @@ dependencies {
     implementation "io.grpc:grpc-stub:1.68.1"
     implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '4.29.3'
     implementation group: 'io.grpc', name: 'grpc-all', version: '1.69.0'
+
+    // SLF4J API
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+
+    // Logback (Logging implementation for SLF4J)
+    runtimeOnly 'ch.qos.logback:logback-classic:1.4.11'
 }
 
 sourceSets {
