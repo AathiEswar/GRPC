@@ -1,33 +1,57 @@
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.4.1'
-	id 'io.spring.dependency-management' version '1.1.7'
+    id 'java'
+    id 'org.springframework.boot' version '3.4.1'
+    id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'com.graphql'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
-	}
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-graphql'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	runtimeOnly 'com.h2database:h2'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework:spring-webflux'
-	testImplementation 'org.springframework.graphql:spring-graphql-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-graphql'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    runtimeOnly 'com.h2database:h2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework:spring-webflux'
+    testImplementation 'org.springframework.graphql:spring-graphql-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation 'ch.qos.logback:logback-classic:1.4.11' // Latest stable version as of 2025
+    implementation 'org.slf4j:slf4j-api:2.0.9'            // SLF4J API for abstraction
+
+	implementation 'org.projectlombok:lombok:1.18.30' // Latest version as of 2025
+	annotationProcessor 'org.projectlombok:lombok:1.18.30' // Required for compile-time annotations
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.30' // Optional: For testing
+	testImplementation 'org.projectlombok:lombok:1.18.30' // Optional: For testing
+
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
+
+tasks.register("prepareLogDir") {
+	doLast {
+		def logDir = layout.buildDirectory.dir("logs").get().asFile
+		if (!logDir.exists()) {
+			logDir.mkdirs()
+		}
+	}
+}
+
+tasks.named("build").configure {
+	dependsOn("prepareLogDir")
+}
+
+

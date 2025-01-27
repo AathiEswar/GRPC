@@ -6,8 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /*
 *
 * Install all dependencies -> JPA , Spring Web , GRAPHQL , H2 Database
+* Create Bean with Entity
 * Define Schema in resource/graphql/file.graphql
-*
+* Create Repository with JPA
+* Create Business Login in Services
+* Map the endpoints withe services in the Resolver/Controller
 *
 * */
 

@@ -9,11 +9,11 @@ message BalanceCheckRequest{
   int32 account_number = 1;
 }
 
-message AccountBalanceResponse{
+message AccountBalance{
   int32 account_number = 1;
   int32  balance = 2;
 }
 
 service BankService{
-  rpc GetAccountBalance( BalanceCheckRequest ) returns (AccountBalanceResponse);
+  rpc GetAccountBalance( BalanceCheckRequest ) returns (AccountBalance);
 }

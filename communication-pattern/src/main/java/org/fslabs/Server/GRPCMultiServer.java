@@ -30,7 +30,6 @@ public class GRPCMultiServer {
 
         // create new instance and return it
         return new GRPCMultiServer(serverBuilder.build());
-
     }
 
     public GRPCMultiServer start(){

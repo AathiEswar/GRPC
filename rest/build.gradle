@@ -38,10 +38,31 @@ dependencies {
 		implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
 		implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+		implementation 'ch.qos.logback:logback-classic:1.4.11' // Latest stable version as of 2025
+		implementation 'org.slf4j:slf4j-api:2.0.9'            // SLF4J API for abstraction
+
+		implementation 'org.projectlombok:lombok:1.18.30' // Latest version as of 2025
+		annotationProcessor 'org.projectlombok:lombok:1.18.30' // Required for compile-time annotations
+		testAnnotationProcessor 'org.projectlombok:lombok:1.18.30' // Optional: For testing
+		testImplementation 'org.projectlombok:lombok:1.18.30' // Optional: For testing
 	}
 
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+tasks.register("prepareLogDir") {
+	doLast {
+		def logDir = file("${buildDir}/logs")
+		if (!logDir.exists()) {
+			logDir.mkdirs()
+		}
+	}
+}
+
+tasks.named("build").configure {
+	dependsOn("prepareLogDir")
 }

@@ -27,6 +27,8 @@ dependencies {
 
     // Logback (Logging implementation for SLF4J)
     runtimeOnly 'ch.qos.logback:logback-classic:1.4.11'
+
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
 }
 
 sourceSets {
@@ -53,6 +55,20 @@ protobuf {
         }
     }
 }
+
+tasks.register("prepareLogDir") {
+    doLast {
+        def logDir = layout.buildDirectory.dir("logs").get().asFile
+        if (!logDir.exists()) {
+            logDir.mkdirs()
+        }
+    }
+}
+
+tasks.named("build").configure {
+    dependsOn("prepareLogDir")
+}
+
 
 test {
     useJUnitPlatform()
