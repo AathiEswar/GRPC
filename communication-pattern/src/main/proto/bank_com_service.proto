@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+package unary;
+
+option java_multiple_files = true;
+option java_package = "com.fslabs.communications.unary";
+
+import "google/protobuf/empty.proto";
+
+message BalanceCheckRequest{
+  int32 account_number = 1;
+}
+
+message AccountBalance{
+  int32 account_number = 1;
+  int32  balance = 2;
+}
+
+message AllAccountsResponse{
+  repeated AccountBalance accountBalance = 1;
+}
+
+message DebitRequest{
+  int32 account_number = 1;
+  int32 amount_to_be_debited = 2;
+}
+
+message AmountResponse{
+  int32 amount = 1;
+}
+
+message DepositRequest{
+  oneof request {
+    int32 accountNumber = 1;
+    AmountResponse money = 2;
+  }
+}
+
+message TransferDetailsRequest{
+  int32 account_from_transfer = 1;
+  int32 account_to_transfer = 2;
+  int32 amount_to_transfer = 3 ;
+}
+
+enum TransferStatus {
+  REJECTED = 0;
+  COMPLETED = 1;
+}
+
+message TransferStatusResponse{
+  TransferStatus status = 1;
+  AccountBalance account_from_balance = 2;
+  AccountBalance account_to_balance = 3;
+}
+
+service BankService{
+  rpc GetAccountBalance(BalanceCheckRequest) returns (AccountBalance);
+
+  // get all the accounts , and return repeated list of account
+  rpc GetAllAccounts(google.protobuf.Empty) returns (AllAccountsResponse);
+
+
+  // server streaming
+  rpc DebitAmount(DebitRequest) returns (stream AmountResponse);
+
+  // client streaming
+  rpc DepositAmountInvoke(stream DepositRequest) returns (AccountBalance);
+
+}
+
+service TransferService{
+  // bi-directional streaming
+  rpc TransferAmountInvoke(stream TransferDetailsRequest) returns (stream TransferStatusResponse);
+}

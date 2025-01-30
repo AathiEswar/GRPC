@@ -37,7 +37,7 @@ public class GRPCMultiServer {
         List<String> services = server.getServices()
                 // converts to stream to enable stream java api for functional programming
                 .stream()
-                // maps all the services of type ssdefinition and get their descriptor
+                // maps all the services of type definition and get their descriptor
                 .map(ServerServiceDefinition::getServiceDescriptor)
                 // get all the names of services from their descriptor
                 .map(ServiceDescriptor::getName)

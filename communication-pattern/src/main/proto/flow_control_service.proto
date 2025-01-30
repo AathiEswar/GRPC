@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package flow_control;
+
+option java_package="com.fslabs.communications.flow";
+option java_multiple_files=true;
+
+message RequestSize{
+  int32 size = 1;
+}
+
+message OutputResponse{
+  int32 value = 1;
+}
+
+service FlowControlService {
+  rpc getValue( stream RequestSize ) returns ( stream OutputResponse );
+}
