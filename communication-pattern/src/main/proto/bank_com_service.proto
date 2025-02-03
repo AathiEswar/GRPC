@@ -53,12 +53,23 @@ message TransferStatusResponse{
   AccountBalance account_to_balance = 3;
 }
 
+// Enum for custom validation to client
+enum ClientValidationStatus{
+  INVALID_ARGUMENT = 0;
+  INVALID_ACCOUNT = 1;
+  INSUFFICIENT_BALANCE = 3;
+}
+
+// object for error message
+message ErrorMessage{
+  ClientValidationStatus validation_code = 1;
+}
+
 service BankService{
   rpc GetAccountBalance(BalanceCheckRequest) returns (AccountBalance);
 
   // get all the accounts , and return repeated list of account
   rpc GetAllAccounts(google.protobuf.Empty) returns (AllAccountsResponse);
-
 
   // server streaming
   rpc DebitAmount(DebitRequest) returns (stream AmountResponse);

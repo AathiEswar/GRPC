@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 // implement request interface
 public class TransferRequestHandlers implements StreamObserver<TransferDetailsRequest> {
 
-    private static final Logger logger = LoggerFactory.getLogger(DepositRequestHandlers.class);
+    private static final Logger logger = LoggerFactory.getLogger(TransferRequestHandlers.class);
 
     // initialize response
     private final StreamObserver<TransferStatusResponse> requestStreamObserver;
@@ -60,7 +60,7 @@ public class TransferRequestHandlers implements StreamObserver<TransferDetailsRe
         TransferStatus status = TransferStatus.REJECTED;
 
         // check if its not the same account and if there is enough balance to take money from
-        if ((accountTo != accountFrom) && (amountToTransfer <= AccountRepository.getBalance(accountFrom))) {
+        if ((accountTo != accountFrom) && ( amountToTransfer <= AccountRepository.getBalance(accountFrom))) {
             AccountRepository.deductAmount(amountToTransfer, accountFrom);
             AccountRepository.addAmount(amountToTransfer, accountTo);
             status = TransferStatus.COMPLETED;

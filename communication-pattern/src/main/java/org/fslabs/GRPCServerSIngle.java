@@ -1,6 +1,7 @@
 package org.fslabs;
 
 import io.grpc.ServerBuilder;
+import org.fslabs.Services.BankServiceStream;
 
 public class GRPCServerSIngle {
     public static void main(String[] args) throws Exception {

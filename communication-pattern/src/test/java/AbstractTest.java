@@ -1,6 +1,6 @@
 import com.fslabs.communications.unary.BankServiceGrpc;
 import common.AbstractChannelTest;
-import org.fslabs.BankServiceStream;
+import org.fslabs.Services.BankServiceStream;
 import org.fslabs.Server.GRPCMultiServer;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;

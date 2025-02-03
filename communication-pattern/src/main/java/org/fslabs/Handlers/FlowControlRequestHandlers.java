@@ -22,7 +22,6 @@ public class FlowControlRequestHandlers implements StreamObserver<RequestSize> {
         emittedValue = 0;
     }
 
-
     @Override
     public void onNext(RequestSize requestSize) {
         // send the stream of response based on the request size of the client

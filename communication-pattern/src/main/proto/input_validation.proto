@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package input_validation;
+
+option java_multiple_files = true;
+option java_package = "com.fslabs.input_validation";
+
+import "google/protobuf/empty.proto";
+
+message BalanceCheckRequest{
+  int32 account_number = 1;
+}
+
+message AccountBalance{
+  int32 account_number = 1;
+  int32  balance = 2;
+}
+
+message DebitRequest{
+  int32 account_number = 1;
+  int32 amount_to_be_debited = 2;
+}
+
+message AmountResponse{
+  int32 amount = 1;
+}
+
+service BankService{
+  rpc GetAccountBalance(BalanceCheckRequest) returns (AccountBalance);
+
+  // server streaming
+  rpc DebitAmount(DebitRequest) returns (stream AmountResponse);
+
+}
