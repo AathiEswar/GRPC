@@ -3,6 +3,7 @@ package org.fslabs;
 import com.fslabs.communications.unary.*;
 import com.google.common.util.concurrent.Uninterruptibles;
 import com.google.protobuf.Empty;
+import io.grpc.stub.ServerCallStreamObserver;
 import io.grpc.stub.StreamObserver;
 import org.fslabs.Handlers.DepositRequestHandlers;
 import org.fslabs.Repository.AccountRepository;
@@ -26,6 +27,8 @@ public class BankServiceStream extends BankServiceGrpc.BankServiceImplBase {
                 .setAccountNumber(accountNumber)
                 .build();
 
+        // enables gzip compression encoding
+        ((ServerCallStreamObserver<AccountBalance>) responseObserver).setCompression("gzip");
         // send the value in the stream
         responseObserver.onNext(accountBalance);
 

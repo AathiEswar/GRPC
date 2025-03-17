@@ -2209,3 +2209,118 @@
 2025-02-03 16:03:46 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0xa6d650e1, L:/127.0.0.1:6969 - R:/127.0.0.1:53346] OUTBOUND HEADERS: streamId=5 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
 2025-02-03 16:03:46 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0xa6d650e1, L:/127.0.0.1:6969 - R:/127.0.0.1:53346] OUTBOUND DATA: streamId=5 padding=0 endStream=false length=13 bytes=0000000008080110c4d4abcc02
 2025-02-03 16:03:46 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0xa6d650e1, L:/127.0.0.1:6969 - R:/127.0.0.1:53346] OUTBOUND HEADERS: streamId=5 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent0 - -Dio.netty.noUnsafe: false
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent0 - Java version: 21
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent0 - java.nio.Buffer.address: available
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @5b03b9fe
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent - sun.misc.Unsafe: available
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent - -Dio.netty.tmpdir: C:\Users\91807\AppData\Local\Temp (java.io.tmpdir)
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent - Platform: Windows
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+2025-03-17 11:56:29 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent - -Dio.netty.noPreferDirect: false
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.u.c.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.u.i.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent0 - Java version: 21
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @5b03b9fe
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\91807\AppData\Local\Temp (java.io.tmpdir)
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent - Platform: Windows
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2025-03-17 11:56:30 DEBUG [Test worker] io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+2025-03-17 11:56:30 DEBUG [Test worker] i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.u.ResourceLeakDetector - -Dio.grpc.netty.shaded.io.netty.leakDetection.level: simple
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.u.ResourceLeakDetector - -Dio.grpc.netty.shaded.io.netty.leakDetection.targetRecords: 4
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+2025-03-17 11:56:30 DEBUG [Test worker] i.g.n.s.i.n.b.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2025-03-17 11:56:30 DEBUG [grpc-nio-boss-ELG-1-1] i.g.n.s.i.n.channel.DefaultChannelId - -Dio.netty.processId: 12068 (auto-detected)
+2025-03-17 11:56:30 DEBUG [grpc-nio-boss-ELG-1-1] i.g.n.shaded.io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+2025-03-17 11:56:30 DEBUG [grpc-nio-boss-ELG-1-1] i.g.n.shaded.io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+2025-03-17 11:56:30 DEBUG [grpc-nio-boss-ELG-1-1] i.g.n.s.i.n.u.NetUtilInitializations - Loopback interface: loopback_0 (Software Loopback Interface 1, 0:0:0:0:0:0:0:1)
+2025-03-17 11:56:30 DEBUG [grpc-nio-boss-ELG-1-1] i.g.n.shaded.io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2025-03-17 11:56:30 DEBUG [grpc-nio-boss-ELG-1-1] i.g.n.s.i.n.channel.DefaultChannelId - -Dio.netty.machineId: 08:8f:c3:ff:fe:1c:01:c9 (auto-detected)
+2025-03-17 11:56:30 DEBUG [grpc-nio-boss-ELG-1-1] i.g.n.s.io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+2025-03-17 11:56:30 DEBUG [grpc-nio-boss-ELG-1-1] i.g.n.s.io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+2025-03-17 11:56:30 DEBUG [grpc-nio-boss-ELG-1-1] i.g.n.s.io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2025-03-17 11:56:30 DEBUG [grpc-nio-boss-ELG-1-1] i.g.n.s.i.n.b.ChannelInitializerExtensions - -Dio.netty.bootstrap.extensions: null
+2025-03-17 11:56:30 INFO  [Test worker] org.fslabs.Server.GRPCMultiServer - port : 6969 , services : [unary.BankService]
+2025-03-17 11:56:30 DEBUG [grpc-default-executor-0] i.g.n.s.i.n.buffer.AbstractByteBuf - -Dio.grpc.netty.shaded.io.netty.buffer.checkAccessible: true
+2025-03-17 11:56:30 DEBUG [grpc-default-executor-0] i.g.n.s.i.n.buffer.AbstractByteBuf - -Dio.grpc.netty.shaded.io.netty.buffer.checkBounds: true
+2025-03-17 11:56:30 DEBUG [grpc-default-executor-0] i.g.n.s.i.n.u.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.grpc.netty.shaded.io.netty.util.ResourceLeakDetector@13001588
+2025-03-17 11:56:30 DEBUG [grpc-default-executor-0] i.g.n.shaded.io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2025-03-17 11:56:30 DEBUG [grpc-default-executor-0] i.g.n.shaded.io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+2025-03-17 11:56:30 DEBUG [grpc-default-executor-0] i.g.n.shaded.io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+2025-03-17 11:56:30 DEBUG [grpc-default-executor-0] i.g.n.shaded.io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+2025-03-17 11:56:30 DEBUG [grpc-default-executor-0] i.g.n.shaded.io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] OUTBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] INBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] OUTBOUND SETTINGS: ack=true
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] OUTBOUND SETTINGS: ack=true
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] INBOUND SETTINGS: ack=true
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] INBOUND SETTINGS: ack=true
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:authority: localhost:6969, :path: /unary.BankService/GetAccountBalance, :method: POST, :scheme: http, content-type: application/grpc, te: trailers, user-agent: grpc-java-netty/1.69.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] OUTBOUND DATA: streamId=3 padding=0 endStream=true length=7 bytes=00000000020805
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /unary.BankService/GetAccountBalance, :authority: localhost:6969, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.69.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] INBOUND DATA: streamId=3 padding=0 endStream=true length=7 bytes=00000000020805
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] OUTBOUND PING: ack=false bytes=1234
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] INBOUND PING: ack=false bytes=1234
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] OUTBOUND PING: ack=true bytes=1234
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] INBOUND PING: ack=true bytes=1234
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=9 bytes=000000000408051064
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] INBOUND HEADERS: streamId=3 headers=GrpcHttp2ResponseHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] INBOUND DATA: streamId=3 padding=0 endStream=false length=9 bytes=000000000408051064
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] OUTBOUND PING: ack=false bytes=1234
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] INBOUND HEADERS: streamId=3 headers=GrpcHttp2ResponseHeaders[grpc-status: 0] padding=0 endStream=true
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] INBOUND PING: ack=false bytes=1234
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] OUTBOUND PING: ack=true bytes=1234
+2025-03-17 11:56:30 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] INBOUND PING: ack=true bytes=1234
+2025-03-17 11:56:30 INFO  [Test worker] UnaryTest - account_number: 5
+balance: 100
+
+2025-03-17 11:56:31 INFO  [Test worker] org.fslabs.Server.GRPCMultiServer - server stopper
+2025-03-17 11:56:31 DEBUG [grpc-nio-worker-ELG-3-3] i.g.n.s.i.g.netty.NettyServerHandler - [id: 0x9d7c38e0, L:/127.0.0.1:6969 - R:/127.0.0.1:54697] OUTBOUND GO_AWAY: lastStreamId=3 errorCode=0 length=0 bytes=
+2025-03-17 11:56:31 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] INBOUND GO_AWAY: lastStreamId=3 errorCode=0 length=0 bytes=
+2025-03-17 11:56:31 DEBUG [grpc-nio-worker-ELG-3-2] i.g.n.s.i.g.netty.NettyClientHandler - [id: 0xfcf3b95a, L:/127.0.0.1:54697 - R:localhost/127.0.0.1:6969] OUTBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
